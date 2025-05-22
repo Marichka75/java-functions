@@ -10,7 +10,9 @@ public class DocComments {
         double bmi = calculateBodyMassIndex(1.55, 44.50);
         System.out.println(bmi);
 
-        //Ejecuta el nuevo método 
+        //Ejecuta el nuevo método
+        String bmiResult = resultBodyMassIndex(bmi);
+        System.out.println(bmiResult);
     }
 
     /**
@@ -57,7 +59,7 @@ public class DocComments {
 
     //Escribe una función que con el índice de masa corporal devuelva un String con los resultados y documéntala:
     
-    /* Clasificación índice de masa corportal rango - kg/m2
+    /* Clasificación índice de masa corporal rango - kg/m2
     Delgadez severa	< 16
     Delgadez moderada	16 - 17
     Delgadez leve	17 - 18.5
@@ -67,6 +69,35 @@ public class DocComments {
     Obeso Clase II	35 - 40
     Obeso Clase III	> 40 */
 
+    /**
+     * Function name: resultBodyMassIndex
+     *
+     * @param bmi (double) The calculated Body Mass Index.
+     * @return (String) A classification string indicating the health status based on the BMI value.
+     *
+     * Inside the function:
+     * 1. Evaluates the provided BMI against a predefined range of values.
+     * 2. Returns a descriptive string classifying the BMI into categories such as "Delgadez severa", "Normal", "Sobrepeso", "Obeso Clase I", etc.
+     */
 
+    public static String resultBodyMassIndex(double bmi){
+        if (bmi <16) {
+            return "Delgadez severa";
+        } else if (bmi >= 16 && bmi <=17) {
+            return "Delgadez moderada";
+        } else if (bmi >= 17 && bmi < 18.5) {
+            return "Delgadez leve";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            return "Normal";
+        } else if (bmi >= 25 && bmi < 30) {
+            return "Sobrepeso";
+        } else if (bmi >= 30 && bmi < 35) {
+            return "Obeso Clase I";
+        } else if (bmi >= 35 && bmi < 40) {
+            return "Obeso Clase II";
+        } else { // bmi >= 40
+            return "Obeso Clase III";
+        }
+    }
 
 }
