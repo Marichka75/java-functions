@@ -95,7 +95,7 @@ public class DocComments {
             return "Obeso Clase I";
         } else if (bmi >= 35 && bmi < 40) {
             return "Obeso Clase II";
-        } else { // bmi >= 40
+        } else {
             return "Obeso Clase III";
         }
     }
